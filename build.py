@@ -114,6 +114,8 @@ def page(path, title, body, active="", description=None, scripts=()):
         "email": "mailto:" + SITE["emails"][0], "sameAs": [l["url"] for l in SITE["links"]],
     }
     structured_data = person
+    if path == "index.html" and SITE.get("google_site_verification"):
+        social += '\n<meta name="google-site-verification" content="{}">'.format(esc(SITE["google_site_verification"]))
     if site_origin:
         person.update({"@id": site_origin + "/#person", "url": site_origin + "/",
                        "image": site_origin + "/assets/img/portrait.jpg"})
