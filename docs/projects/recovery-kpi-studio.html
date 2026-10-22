@@ -1,0 +1,60 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Recovery KPI Studio | Marzieh Allahyari</title>
+<meta name="description" content="An interactive website for exploring longitudinal recovery data through transparent indicators, interactive charts, and documented analysis workflows.">
+<link rel="canonical" href="https://marzyy-mr96.github.io/projects/recovery-kpi-studio.html">
+<meta property="og:image" content="https://marzyy-mr96.github.io/assets/img/portrait.jpg">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Recovery KPI Studio | Marzieh Allahyari">
+<meta property="og:description" content="An interactive website for exploring longitudinal recovery data through transparent indicators, interactive charts, and documented analysis workflows.">
+<meta name="color-scheme" content="light dark">
+<link rel="icon" href="../assets/img/favicon.svg" type="image/svg+xml">
+<link rel="stylesheet" href="../assets/css/style.css">
+<script>document.documentElement.classList.add('js');try{var t=localStorage.getItem('theme');if(t)document.documentElement.dataset.theme=t;}catch(e){}</script>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "Person", "name": "Marzieh Allahyari", "jobTitle": "Ph.D. Student, Civil Engineering", "affiliation": {"@type": "CollegeOrUniversity", "name": "University of Kansas"}, "email": "mailto:marzieh.allahyari@ku.edu", "sameAs": ["https://www.linkedin.com/in/marzieh-allahyari-564526149", "https://www.researchgate.net/profile/Marzieh-Allahyari-2"]}</script>
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+<header class="site-header">
+  <div class="wrap header-inner">
+    <a class="brand" href="../index.html">Marzieh Allahyari</a>
+    <button class="nav-toggle" aria-expanded="false" aria-controls="site-nav">Menu</button>
+    <nav id="site-nav" aria-label="Main"><ul><li><a href="../index.html">Home</a></li><li><a href="../about.html">About</a></li><li><a href="../research.html" aria-current="page">Research</a></li><li><a href="../publications.html">Publications</a></li><li><a href="../skills.html">Skills & training</a></li><li><a href="../cv.html">CV</a></li><li><a href="../contact.html">Contact</a></li></ul></nav>
+    <button class="theme-toggle" type="button" aria-label="Toggle dark mode" title="Toggle dark mode">
+      <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8z"/></svg>
+    </button>
+  </div>
+</header>
+<main id="main">
+
+<article class="wrap project">
+  <p class="crumbs"><a href="../research.html">Research</a> / Research Software</p>
+  <header class="project-head">
+    <p class="eyebrow">Research Software</p>
+    <h1>Recovery KPI Studio</h1>
+    <p class="lede">An interactive website for exploring longitudinal recovery data through transparent indicators, interactive charts, and documented analysis workflows.</p>
+    <p class="kpi-access"><button class="btn btn-primary" type="button" disabled aria-describedby="kpi-access-note">Open Recovery KPI Studio</button><span id="kpi-access-note" class="kpi-access-note">Not connected yet</span></p>
+    <dl class="facts"><div><dt>Status</dt><dd>Local prototype · Version 1</dd></div><div><dt>Tools</dt><dd><ul class="chips"><li>Python</li><li>Streamlit</li><li>pandas</li><li>Plotly</li><li>openpyxl</li><li>pytest</li></ul></dd></div></dl>
+  </header>
+  <div class="prose"><h2>Recovery KPI Studio</h2>
+<p>I developed Recovery KPI Studio as an interactive website to help researchers explore disaster recovery data while keeping the meaning of each variable, calculation, and comparison clear. The project grew from my work with longitudinal housing recovery records, where examining change over time requires attention to data quality, indicator definitions, and the observations included in each analysis. It brings these needs together in a workspace that connects data engineering, analytics, and visualization.</p>
+<p>Researchers can upload CSV or Excel files, select worksheets, and inspect missing values, duplicate records, and column types before combining data across sources. Records can be joined using a shared key or stacked into one dataset, with source labels retained to support later comparisons. Users then identify household IDs, survey waves, events, weights, and recovery measures, documenting how their selected variables should be interpreted.</p>
+<p>Building on that foundation, the website supports the definition and exploration of key performance indicators. Formula previews make calculations visible, while weighted and unweighted summaries allow researchers to examine their data from different perspectives. Interactive charts and filters help users follow recovery trajectories across survey waves and compare groups. An equation builder also allows users to select variables and multipliers, construct averages or weighted combinations, and compare the resulting estimates with an observed outcome.</p>
+<p>My contribution includes shaping this analytical workflow and developing the interface, data inspection tools, filters, visualizations, and equation builder. Throughout the design, I focused on making analytical choices easy to review: which records enter a comparison, how an indicator is defined, and what a calculation represents. Users can export results together with indicator definitions, data-quality reports, and methodology documentation so that the analysis remains understandable beyond the website.</p>
+<p>The website uses Streamlit for its interface, pandas for data manipulation, openpyxl for Excel support, and Plotly for interactive charts. Separate Python modules handle data loading, validation, indicator calculations, longitudinal analysis, and exports, with tests covering calculation and validation behavior. Version 1 currently runs locally and includes a synthetic practice dataset. It is not publicly hosted yet, and this case study does not display confidential household records or unpublished research findings.</p>
+<p><a href="../contact.html">Discuss the project →</a></p></div>
+</article>
+</main>
+<footer class="site-footer">
+  <div class="wrap footer-inner">
+    <p>© 2026 Marzieh Allahyari · Department of Civil and Environmental Engineering, University of Kansas</p>
+    <p class="footer-links"><a href="mailto:marzieh.allahyari@ku.edu">marzieh.allahyari@ku.edu</a> · <a href="https://www.linkedin.com/in/marzieh-allahyari-564526149" rel="noopener" target="_blank">LinkedIn</a> · <a href="https://www.researchgate.net/profile/Marzieh-Allahyari-2" rel="noopener" target="_blank">ResearchGate</a></p>
+  </div>
+</footer>
+<script src="../assets/js/main.js" defer></script>
+
+</body>
+</html>

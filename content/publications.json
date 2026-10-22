@@ -1,0 +1,36 @@
+{
+  "_help": "Use two sections: Publications and Presentations. Keep manuscript and presentation statuses in each entry. Use **...** to bold your name.",
+  "sections": [
+    {
+      "title": "Publications",
+      "items": [
+        {
+          "text": "**Allahyari, M.**, & Soltani, M. An efficient framework for uncertainty propagation in nonlinear reinforced concrete analysis using multiplicative dimension reduction and Laplace-transform maximum entropy. *PLOS ONE*, under review.",
+          "link": ""
+        },
+        {
+          "text": "**Allahyari, M.**, & Sutley, E. State-of-the-Art Longitudinal Field Studies in Disaster Housing Resilience and Recovery. Summary submitted to the Frontiers Research Topic *Reviews in Resilience*. Receipt acknowledged; editorial decision pending.",
+          "link": ""
+        },
+        {
+          "text": "**Allahyari, M.**, Sutley, E. J., et al. Manuscripts on long-term post-disaster housing recovery.",
+          "link": ""
+        }
+      ]
+    },
+    {
+      "title": "Presentations",
+      "items": [
+        {
+          "text": "**Allahyari, M.**, & Sutley, E. J. *Dimension-Specific Demographic Gaps in Housing Recovery After Hurricanes Matthew and Florence*. Upcoming presentation, Society for Risk Analysis (SRA), 2026.",
+          "link": ""
+        },
+        {
+          "text": "**Allahyari, M.**, & Sutley, E. J. *Longitudinal Housing Recovery After Hurricane Matthew and Implications for Disaster Resilience*. Poster, 71st KU Structural Engineering Annual Conference, University of Kansas.",
+          "link": "files/Marzieh_Allahyari_Housing_Recovery_Poster.pdf",
+          "link_label": "View poster (PDF)"
+        }
+      ]
+    }
+  ]
+}

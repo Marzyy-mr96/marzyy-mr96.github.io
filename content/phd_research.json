@@ -1,0 +1,62 @@
+{
+  "_help": "Your Ph.D. research block at the top of the Research page and on the doctoral research page. Keep every stream at the level of questions and approach: no data, results, metric names, or unpublished ideas.",
+  "project_slug": "housing-recovery",
+  "title": "AI and Long-Term Disaster Recovery",
+  "kicker": "Ph.D. research · University of Kansas · 2024 – present",
+  "summary": "How do households and their housing recover in the years after a disaster, and what changes when a second disaster strikes before recovery is complete? My doctoral research studies these questions using the NIST-funded longitudinal field study of Lumberton, North Carolina, flooded by Hurricane Matthew (2016) and Hurricane Florence (2018). By combining data engineering and data science, I integrate years of field records and apply machine learning and statistical modeling to reveal recovery patterns, with careful validation supporting trustworthy conclusions.",
+  "streams": [
+    {
+      "title": "Following recovery over the long term",
+      "area": "Data integration",
+      "tools": [
+        "Python",
+        "pandas",
+        "NumPy",
+        "openpyxl"
+      ],
+      "narrative": "Following the same households over several years requires a consistent record of their recovery, even as survey questions and participation change. I reconcile household and housing information across survey waves, document how inconsistent or missing responses are handled, and retain unresolved values when the evidence does not support an inference. This creates a traceable foundation for examining recovery over time and communicating it through tables, figures, and reports."
+    },
+    {
+      "title": "Recognizing recovery pathways with AI",
+      "area": "Unsupervised learning",
+      "tools": [
+        "Python",
+        "NumPy",
+        "SciPy",
+        "scikit-learn"
+      ],
+      "narrative": "Households can reach similar recovery levels through very different experiences, so I examine how their trajectories unfold rather than relying only on average trends. I use Dynamic Time Warping with hierarchical clustering to group observed trajectories and latent class growth analysis to explore model-based pathways. Comparing the two approaches and assessing the separation and fit of the resulting groups helps me interpret which patterns are supported by the data."
+    },
+    {
+      "title": "Understanding why recovery is unequal",
+      "area": "Statistical modeling",
+      "tools": [
+        "Python",
+        "statsmodels",
+        "SciPy"
+      ],
+      "narrative": "To investigate differences in recovery, I combine nonparametric group comparisons with regression and linear mixed-effects models. This lets me examine demographic and housing characteristics while accounting for repeated observations of the same households. I distinguish unadjusted differences from adjusted associations and use sensitivity analysis to consider how analytical choices affect the interpretation. The aim is to describe unequal recovery without treating observational associations as proof of causation."
+    },
+    {
+      "title": "Trustworthy AI for recovery decisions",
+      "area": "Machine learning evaluation",
+      "tools": [
+        "Python",
+        "scikit-learn",
+        "pandas"
+      ],
+      "narrative": "Predictive models need careful evaluation before their results can inform recovery decisions. I compare Random Forest, Gradient Boosting, and regularized logistic regression with simple baselines, using validation that keeps related household records together. Diagnosing data leakage has been an important part of this work. I examine discrimination, calibration, and feature importance to understand both model performance and the limits of a prediction."
+    },
+    {
+      "title": "Recovery in place",
+      "area": "Geospatial analytics",
+      "tools": [
+        "Python",
+        "NumPy",
+        "pandas",
+        "public geospatial data"
+      ],
+      "narrative": "Household recovery also reflects the places in which people live. I bring public hazard, census, and social vulnerability information into the analysis and use spatial statistics to explore geographic patterns. Documenting the sources and limitations of these contextual data helps me interpret how neighborhood conditions relate to household observations, while keeping exact household locations and identifying information within private analyses."
+    }
+  ]
+}

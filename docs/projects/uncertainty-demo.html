@@ -1,0 +1,98 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Interactive: Monte Carlo vs. Dimension Reduction | Marzieh Allahyari</title>
+<meta name="description" content="A hands-on demo of uncertainty propagation. Watch Monte Carlo build a response distribution sample by sample, and compare it with a dimension-reduction estimate that needs only 17 model runs.">
+<link rel="canonical" href="https://marzyy-mr96.github.io/projects/uncertainty-demo.html">
+<meta property="og:image" content="https://marzyy-mr96.github.io/assets/img/portrait.jpg">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Interactive: Monte Carlo vs. Dimension Reduction | Marzieh Allahyari">
+<meta property="og:description" content="A hands-on demo of uncertainty propagation. Watch Monte Carlo build a response distribution sample by sample, and compare it with a dimension-reduction estimate that needs only 17 model runs.">
+<meta name="color-scheme" content="light dark">
+<link rel="icon" href="../assets/img/favicon.svg" type="image/svg+xml">
+<link rel="stylesheet" href="../assets/css/style.css">
+<script>document.documentElement.classList.add('js');try{var t=localStorage.getItem('theme');if(t)document.documentElement.dataset.theme=t;}catch(e){}</script>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "Person", "name": "Marzieh Allahyari", "jobTitle": "Ph.D. Student, Civil Engineering", "affiliation": {"@type": "CollegeOrUniversity", "name": "University of Kansas"}, "email": "mailto:marzieh.allahyari@ku.edu", "sameAs": ["https://www.linkedin.com/in/marzieh-allahyari-564526149", "https://www.researchgate.net/profile/Marzieh-Allahyari-2"]}</script>
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+<header class="site-header">
+  <div class="wrap header-inner">
+    <a class="brand" href="../index.html">Marzieh Allahyari</a>
+    <button class="nav-toggle" aria-expanded="false" aria-controls="site-nav">Menu</button>
+    <nav id="site-nav" aria-label="Main"><ul><li><a href="../index.html">Home</a></li><li><a href="../about.html">About</a></li><li><a href="../research.html" aria-current="page">Research</a></li><li><a href="../publications.html">Publications</a></li><li><a href="../skills.html">Skills & training</a></li><li><a href="../cv.html">CV</a></li><li><a href="../contact.html">Contact</a></li></ul></nav>
+    <button class="theme-toggle" type="button" aria-label="Toggle dark mode" title="Toggle dark mode">
+      <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8z"/></svg>
+    </button>
+  </div>
+</header>
+<main id="main">
+
+<article class="wrap project">
+  <p class="crumbs"><a href="../research.html">Research</a> / Computational Methods</p>
+  <header class="project-head">
+    <p class="eyebrow">Computational Methods</p>
+    <h1>Interactive: Monte Carlo vs. Dimension Reduction</h1>
+    <p class="lede">A hands-on demo of uncertainty propagation. Watch Monte Carlo build a response distribution sample by sample, and compare it with a dimension-reduction estimate that needs only 17 model runs.</p>
+    
+    <dl class="facts"><div><dt>Status</dt><dd>Interactive demo</dd></div><div><dt>Tools</dt><dd><ul class="chips"><li>JavaScript</li><li>SVG</li></ul></dd></div></dl>
+  </header>
+  <div class="prose"><h2>The example</h2>
+<p>A steel cantilever beam, 3 m long, carries a point load <em>P</em> at its tip and a uniform load <em>w</em> along its length. Its tip deflection is</p>
+<p><em>δ = P·L³ / (3·E·I) + w·L⁴ / (8·E·I)</em></p>
+<p>Four inputs are uncertain and treated as independent normal variables: the loads <em>P</em> (mean 20 kN) and <em>w</em> (mean 5 kN/m), the elastic modulus <em>E</em> (mean 200 GPa), and the moment of inertia <em>I</em> (mean 8 × 10⁻⁵ m⁴). Use the sliders to set how uncertain each one is.</p>
+
+<div class="demo" id="uq-demo">
+  <div class="demo-controls">
+    <fieldset>
+      <legend>Input uncertainty (coefficient of variation)</legend>
+      <label>Tip load P <output data-for="P">10%</output><input type="range" min="2" max="30" value="10" data-var="P"></label>
+      <label>Distributed load w <output data-for="w">10%</output><input type="range" min="2" max="30" value="10" data-var="w"></label>
+      <label>Elastic modulus E <output data-for="E">5%</output><input type="range" min="2" max="30" value="5" data-var="E"></label>
+      <label>Moment of inertia I <output data-for="I">5%</output><input type="range" min="2" max="30" value="5" data-var="I"></label>
+    </fieldset>
+    <div class="demo-run">
+      <label>Monte Carlo samples
+        <select id="uq-n"><option value="200">200</option><option value="1000">1,000</option><option value="5000" selected>5,000</option><option value="20000">20,000</option></select>
+      </label>
+      <button type="button" class="btn btn-primary" id="uq-run">Run Monte Carlo</button>
+    </div>
+  </div>
+  <figure class="viz">
+    <figcaption><strong>Tip deflection distribution (mm)</strong>
+      <span class="legend"><span class="key key-bar"></span>Monte Carlo histogram <span class="key key-line"></span>M-DRM estimate (17 runs)</span>
+    </figcaption>
+    <div class="chart" id="uq-hist" role="img" aria-label="Histogram of Monte Carlo tip deflections with the M-DRM distribution overlaid"></div>
+    <div class="tooltip" id="uq-tip" hidden></div>
+  </figure>
+  <figure class="viz">
+    <figcaption><strong>Monte Carlo running mean vs. number of model runs</strong>
+      <span class="legend"><span class="key key-line key-s1"></span>Monte Carlo mean <span class="key key-line dashed"></span>M-DRM mean</span>
+    </figcaption>
+    <div class="chart chart-short" id="uq-conv" role="img" aria-label="Running Monte Carlo mean converging toward the M-DRM mean"></div>
+  </figure>
+  <table class="stats" id="uq-table">
+    <caption>Estimated response statistics</caption>
+    <thead><tr><th scope="col">Method</th><th scope="col">Model runs</th><th scope="col">Mean (mm)</th><th scope="col">Std. dev. (mm)</th></tr></thead>
+    <tbody></tbody>
+  </table>
+</div>
+
+<h2>How the three methods differ</h2>
+<ul><li><strong>Monte Carlo simulation</strong> samples all inputs at random and evaluates the model for each sample. It is general and becomes accurate with enough samples, but every sample is one full model run.</li><li><strong>FOSM</strong> linearizes the model around the mean inputs. It needs only a handful of runs (9 here) but gives only a mean and standard deviation, and it loses accuracy when the model is strongly nonlinear.</li><li><strong>Multiplicative dimension reduction (M-DRM)</strong> approximates the model as a product of one-variable functions. It evaluates the model at a few Gauss–Hermite points along each input, holding the others at their means (4 × 4 + 1 = 17 runs here), and combines these to estimate the response moments.</li></ul>
+<p>The orange curve is a lognormal distribution matched to the M-DRM mean and standard deviation, for illustration. With large input uncertainties, compare how FOSM and M-DRM track the Monte Carlo reference.</p>
+<p><em>This is a simple teaching example written for this website. It is not the model, data, or results of the thesis or the manuscript under review.</em></p></div>
+</article>
+</main>
+<footer class="site-footer">
+  <div class="wrap footer-inner">
+    <p>© 2026 Marzieh Allahyari · Department of Civil and Environmental Engineering, University of Kansas</p>
+    <p class="footer-links"><a href="mailto:marzieh.allahyari@ku.edu">marzieh.allahyari@ku.edu</a> · <a href="https://www.linkedin.com/in/marzieh-allahyari-564526149" rel="noopener" target="_blank">LinkedIn</a> · <a href="https://www.researchgate.net/profile/Marzieh-Allahyari-2" rel="noopener" target="_blank">ResearchGate</a></p>
+  </div>
+</footer>
+<script src="../assets/js/main.js" defer></script>
+<script src="../assets/js/demo.js" defer></script>
+</body>
+</html>

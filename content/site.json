@@ -1,0 +1,271 @@
+{
+  "name": "Marzieh Allahyari",
+  "eyebrow": "Civil engineering researcher · University of Kansas",
+  "headline": "Data engineering, analytics, and science for disaster resilience.",
+  "site_url": "https://marzyy-mr96.github.io",
+  "description": "Marzieh Allahyari is a civil engineering Ph.D. researcher at the University of Kansas who studies long-term disaster recovery and how artificial intelligence can help understand it responsibly.",
+  "emails": [
+    "marzieh.allahyari@ku.edu",
+    "marzieh.allahyari.1996@gmail.com"
+  ],
+  "affiliation": "Department of Civil and Environmental Engineering, University of Kansas",
+  "location": "Lawrence, Kansas, USA",
+  "links": [
+    {
+      "label": "LinkedIn",
+      "url": "https://www.linkedin.com/in/marzieh-allahyari-564526149"
+    },
+    {
+      "label": "ResearchGate",
+      "url": "https://www.researchgate.net/profile/Marzieh-Allahyari-2"
+    }
+  ],
+  "cv_pdf": "files/Marzieh_Allahyari_CV.pdf",
+  "intro": [
+    "I’m a Ph.D. researcher in Civil and Environmental Engineering.",
+    "I build reliable data pipelines, analyze long-term recovery patterns, and apply statistical modeling and machine learning to understand how communities recover after disasters. My background in structural reliability keeps uncertainty and careful validation at the center of that work."
+  ],
+  "about": [
+    "I’m Marzieh Allahyari, a Ph.D. researcher in Civil and Environmental Engineering at the University of Kansas, advised by Dr. Elaina J. Sutley. I study long-term housing recovery after disasters, with particular attention to how repeated flooding affects households already rebuilding. My work brings engineering judgment and hands-on data analysis to questions about community resilience and unequal recovery.",
+    "My background in structural engineering taught me to work carefully with models and uncertainty. During my master’s research at Tarbiat Modares University, I developed computational tools to study how uncertain material properties and dimensions affect reinforced concrete structures. At Kansas, I have carried that perspective into the NIST-funded longitudinal study of Lumberton, North Carolina, following housing recovery after Hurricanes Matthew and Florence.",
+    "Working with observations collected over several years has shown me how closely reliable analysis depends on the quality of the underlying records. I reconcile information across survey waves, resolve inconsistencies, and document how missing or changing responses are handled. My current manuscripts build on that foundation through sensitivity analysis, comparisons of recovery over time, and examination of demographic differences. Tables, visualizations, and clear explanations are central to how I communicate this work.",
+    "To look beyond average trends, I use time-series clustering with Dynamic Time Warping (DTW) and latent class growth analysis (LCGA) to identify groups with different recovery pathways. Regression, regularized multinomial models, and linear mixed-effects models help me examine relationships between recovery and household characteristics while accounting for repeated observations. These applications connect my experience in data analytics and data science with an interest in AI, particularly interpretable machine learning that helps answer a research question without overstating what the evidence supports.",
+    "I have also developed Recovery KPI Studio, an interactive website built with Streamlit and Plotly that brings data inspection, indicator definition, longitudinal exploration, and interactive visualization into one workspace. Users can work with CSV and Excel files, define equations, and export results alongside their methodology. The project gives me a practical way to translate analytical needs into software that makes calculations and assumptions easier to inspect.",
+    "Alongside my research and software projects, I am developing my data engineering knowledge through completed Udemy courses in data integration and modern data warehousing, complemented by training in data analysis and generative AI. This learning extends the perspective I bring to organizing and using complex data. I am interested in opportunities across industry, research institutions, and academia where I can contribute to dependable data, thoughtful modeling, and useful analytical tools, within disaster resilience and beyond."
+  ],
+  "interests": [
+    {
+      "title": "AI for disaster resilience",
+      "text": "Machine learning that helps explain long-term recovery and is trustworthy enough to inform real decisions."
+    },
+    {
+      "title": "Long-term housing recovery",
+      "text": "How households and housing recover over years, especially when disasters strike the same community more than once."
+    },
+    {
+      "title": "Data engineering",
+      "text": "Building reliable, reproducible pipelines that collect, clean, and integrate survey, hazard, and census data for analysis."
+    },
+    {
+      "title": "Data science for disaster data",
+      "text": "Turning incomplete, multi-year, multi-source field data into reliable, reproducible evidence."
+    },
+    {
+      "title": "Structural engineering",
+      "text": "Understanding how structures respond to loads through nonlinear analysis, structural reliability, and uncertainty quantification."
+    },
+    {
+      "title": "Equity, risk, and uncertainty",
+      "text": "Who falls behind after disasters, and how uncertainty shapes what models can support, from structures to communities."
+    }
+  ],
+  "highlights": [
+    "Doctoral research on AI and long-term recovery after repeated flooding, using the NIST-funded Lumberton longitudinal field study",
+    "Built reproducible Python workflows linking multi-wave household surveys, field inspections, and public hazard and census data",
+    "Implemented time-series clustering (Dynamic Time Warping) and latent class growth models in Python to identify recovery pathways",
+    "Designed leakage-safe validation for machine-learning models and caught a data-leakage problem that had inflated early results",
+    "First-author journal manuscript under review at PLOS ONE",
+    "Recipient of a Society for Risk Analysis travel award"
+  ],
+  "education": [
+    {
+      "degree": "Ph.D., Civil and Environmental Engineering",
+      "school": "University of Kansas",
+      "years": "2024 – 2028 (expected)",
+      "note": "Advisor: Dr. Elaina J. Sutley. Focus: data engineering, AI, and disaster resilience."
+    },
+    {
+      "degree": "M.Sc., Structural Engineering",
+      "school": "Tarbiat Modares University",
+      "years": "2019 – 2022",
+      "note": "Advisor: Prof. Masoud Soltani. Thesis: An approximate method to consider structural uncertainties in the response evaluation of reinforced concrete frames."
+    },
+    {
+      "degree": "B.Sc., Civil Engineering",
+      "school": "University of Tabriz",
+      "years": "2015 – 2018",
+      "note": ""
+    }
+  ],
+  "experience": [
+    {
+      "role": "Graduate Research Assistant",
+      "org": "University of Kansas",
+      "years": "2024 – present",
+      "points": [
+        "Doctoral research on long-term housing recovery after repeated flooding, using data from the NIST-funded Lumberton, North Carolina longitudinal field study.",
+        "Use time-series clustering with Dynamic Time Warping (DTW) and latent class growth analysis (LCGA) to identify and compare household recovery pathways.",
+        "Apply regression, regularized multinomial models, and linear mixed-effects models to examine recovery patterns and demographic differences across repeated observations.",
+        "Evaluate analytical choices through sensitivity analysis and nonparametric group comparisons."
+      ]
+    },
+    {
+      "role": "Master’s Research and Projects, Structural Engineering",
+      "org": "Tarbiat Modares University",
+      "years": "2019 – 2022",
+      "points": [
+        "Developed Python tools for Monte Carlo simulation, first-order second-moment analysis, and dimension-reduction methods, and coupled them with the TaRa nonlinear finite-element program to automate large simulation studies of reinforced concrete members and frames.",
+        "Finite-element modeling in Python; response-spectrum, time-history, and pushover analyses; steel and reinforced concrete design."
+      ]
+    }
+  ],
+  "teaching": [
+    {
+      "role": "Graduate Teaching Assistant",
+      "org": "University of Kansas",
+      "years": "Spring 2026",
+      "points": [
+        "CE 260 Statics and Dynamics (Spring 2026): weekly office hours, problem-solving support, and course assistance for undergraduate engineering students."
+      ]
+    },
+    {
+      "role": "Teaching Assistant",
+      "org": "Tarbiat Modares University",
+      "years": "2019 – 2022",
+      "points": [
+        "Mathematics II and Probability & Statistics for undergraduate students.",
+        "Tutored students in Python programming and the ETABS structural analysis software."
+      ]
+    }
+  ],
+  "skills": [
+    {
+      "group": "Disaster resilience & risk",
+      "core": [
+        "Long-term post-disaster recovery analysis",
+        "Social vulnerability and recovery equity",
+        "Longitudinal household survey data",
+        "Hazard and community data: FEMA, USGS, U.S. Census/ACS, CDC Social Vulnerability Index"
+      ],
+      "familiar": []
+    },
+    {
+      "group": "Data engineering & business intelligence",
+      "core": [
+        "SQL",
+        "Power BI",
+        "Data cleaning and quality checks",
+        "Multi-source data integration and record linkage",
+        "Data warehousing fundamentals"
+      ],
+      "familiar": []
+    },
+    {
+      "group": "AI & machine learning",
+      "core": [
+        "Supervised learning: Random Forest, Gradient Boosting, regularized logistic regression",
+        "Unsupervised learning: time-series clustering with Dynamic Time Warping, hierarchical clustering",
+        "Latent class growth models (EM estimation)",
+        "Model validation: grouped and stratified cross-validation, leakage checks",
+        "Model evaluation: ROC/PR-AUC, calibration, Brier score",
+        "Interpretation: permutation feature importance"
+      ],
+      "familiar": []
+    },
+    {
+      "group": "Data science & statistics",
+      "core": [
+        "Linear mixed-effects and regression models",
+        "Survey weights and longitudinal data",
+        "Nonparametric tests and effect sizes",
+        "Sensitivity analysis",
+        "Reproducible workflows and automated reporting"
+      ],
+      "familiar": [
+        "Spatial statistics (Moran's I, LISA)"
+      ]
+    },
+    {
+      "group": "Uncertainty quantification & reliability",
+      "core": [
+        "Monte Carlo simulation",
+        "First-order second-moment (FOSM)",
+        "Dimension-reduction methods",
+        "Probability-distribution estimation"
+      ],
+      "familiar": []
+    },
+    {
+      "group": "Structural engineering",
+      "core": [
+        "Nonlinear fiber-based finite-element analysis",
+        "Response-spectrum, time-history, and pushover analysis"
+      ],
+      "familiar": []
+    }
+  ],
+  "awards": [
+    "Selected for the NHERI SPARC program (2025) at the Texas Advanced Computing Center (TACC), University of Texas at Austin — travel support offered by NHERI SimCenter through U.S. National Science Foundation funding",
+    "Society for Risk Analysis (SRA) Travel Award (2026) — travel support and complimentary registration",
+    "Phi Kappa Phi Honor Society (2026) — nominated for membership, University of Kansas chapter",
+    "Full scholarship for M.Sc. studies, Tarbiat Modares University (2019)",
+    "Full scholarship for B.Sc. studies, University of Tabriz (2015)"
+  ],
+  "approach_lede": "Long-term disaster data are messy, incomplete, and sensitive. My projects follow the same workflow, from raw field records to evidence that holds up.",
+  "approach": [
+    {
+      "title": "Integrate",
+      "text": "Link multi-wave surveys, field inspections, and public hazard and census data into one consistent, documented, reproducible dataset."
+    },
+    {
+      "title": "Discover",
+      "text": "Use unsupervised machine learning, such as time-series clustering and latent class models, to let recovery pathways emerge from the data."
+    },
+    {
+      "title": "Predict and validate",
+      "text": "Train machine-learning models and stress-test them with grouped cross-validation, leakage checks, calibration, and fairness comparisons."
+    },
+    {
+      "title": "Explain",
+      "text": "Use mixed-effects, regression, and spatial models to explain who falls behind and why, and report how robust each conclusion is."
+    }
+  ],
+  "certifications": [
+    {
+      "title": "Building a Modern Data Warehouse - Data Engineering Bootcamp",
+      "issuer": "Udemy · Baraa Khatib Salkini",
+      "date": "October 16, 2026",
+      "detail": "Certificate of completion · 6.5 hours",
+      "file": "build a modern data warehouse- data engineering.pdf",
+      "display_date": "Fall 2026",
+      "display_detail": "Certificate of completion · 6.5 hours"
+    },
+    {
+      "title": "Generative AI for data analytics",
+      "issuer": "Udemy · Mike X Cohen",
+      "date": "August 4, 2026",
+      "detail": "Certificate of completion · 4.5 hours",
+      "file": "AI-1_Certification.pdf",
+      "display_date": "Summer 2026",
+      "display_detail": "Certificate of completion · 4.5 hours"
+    },
+    {
+      "title": "Data Analysis & AI: From Data to Intelligent Decisions 2026",
+      "issuer": "Udemy · Data Science Academy, School of AI",
+      "date": "August 7, 2026",
+      "detail": "Certificate of completion · 24.5 hours",
+      "file": "AI-2_certifica.pdf",
+      "display_date": "Summer 2026",
+      "display_detail": "Certificate of completion · 24.5 hours"
+    },
+    {
+      "title": "Data Integration Fundamentals",
+      "issuer": "Udemy · John Berry",
+      "date": "October 13, 2026",
+      "detail": "Certificate of completion · 4 hours",
+      "file": "Data Integration.pdf",
+      "display_date": "Fall 2026",
+      "display_detail": "Certificate of completion · 4 hours"
+    },
+    {
+      "title": "Social & Behavioral Research",
+      "issuer": "CITI Program · University of Kansas",
+      "date": "June 16, 2026",
+      "detail": "Basic course · Valid through June 16, 2029",
+      "file": "Marzieh_Allahyari_CITI_Certificate.pdf",
+      "display_date": "Summer 2026",
+      "display_detail": "Basic course · Valid through Summer 2029"
+    }
+  ],
+  "cv_versions": []
+}

@@ -1,0 +1,64 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Uncertainty in Nonlinear Reinforced Concrete Response | Marzieh Allahyari</title>
+<meta name="description" content="M.Sc. research on how uncertainty in materials and dimensions propagates through nonlinear analysis of reinforced concrete frames, and on reducing the computational cost of doing so.">
+<link rel="canonical" href="https://marzyy-mr96.github.io/projects/rc-uncertainty.html">
+<meta property="og:image" content="https://marzyy-mr96.github.io/assets/img/portrait.jpg">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Uncertainty in Nonlinear Reinforced Concrete Response | Marzieh Allahyari">
+<meta property="og:description" content="M.Sc. research on how uncertainty in materials and dimensions propagates through nonlinear analysis of reinforced concrete frames, and on reducing the computational cost of doing so.">
+<meta name="color-scheme" content="light dark">
+<link rel="icon" href="../assets/img/favicon.svg" type="image/svg+xml">
+<link rel="stylesheet" href="../assets/css/style.css">
+<script>document.documentElement.classList.add('js');try{var t=localStorage.getItem('theme');if(t)document.documentElement.dataset.theme=t;}catch(e){}</script>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "Person", "name": "Marzieh Allahyari", "jobTitle": "Ph.D. Student, Civil Engineering", "affiliation": {"@type": "CollegeOrUniversity", "name": "University of Kansas"}, "email": "mailto:marzieh.allahyari@ku.edu", "sameAs": ["https://www.linkedin.com/in/marzieh-allahyari-564526149", "https://www.researchgate.net/profile/Marzieh-Allahyari-2"]}</script>
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+<header class="site-header">
+  <div class="wrap header-inner">
+    <a class="brand" href="../index.html">Marzieh Allahyari</a>
+    <button class="nav-toggle" aria-expanded="false" aria-controls="site-nav">Menu</button>
+    <nav id="site-nav" aria-label="Main"><ul><li><a href="../index.html">Home</a></li><li><a href="../about.html">About</a></li><li><a href="../research.html" aria-current="page">Research</a></li><li><a href="../publications.html">Publications</a></li><li><a href="../skills.html">Skills & training</a></li><li><a href="../cv.html">CV</a></li><li><a href="../contact.html">Contact</a></li></ul></nav>
+    <button class="theme-toggle" type="button" aria-label="Toggle dark mode" title="Toggle dark mode">
+      <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8z"/></svg>
+    </button>
+  </div>
+</header>
+<main id="main">
+
+<article class="wrap project">
+  <p class="crumbs"><a href="../research.html">Research</a> / Structural Reliability</p>
+  <header class="project-head">
+    <p class="eyebrow">Structural Reliability</p>
+    <h1>Uncertainty in Nonlinear Reinforced Concrete Response</h1>
+    <p class="lede">M.Sc. research on how uncertainty in materials and dimensions propagates through nonlinear analysis of reinforced concrete frames, and on reducing the computational cost of doing so.</p>
+    
+    <dl class="facts"><div><dt>Status</dt><dd>M.Sc. thesis (2022) · Journal manuscript under review</dd></div><div><dt>Tools</dt><dd><ul class="chips"><li>Python</li><li>NumPy</li><li>pandas</li><li>TaRa (nonlinear finite-element program)</li></ul></dd></div></dl>
+  </header>
+  <div class="prose"><h2>Why it matters</h2>
+<p>Engineers rarely know the exact strength of concrete, the yield strength of reinforcing steel, or the as-built dimensions of a member. These uncertainties change not only the expected response of a structure but also its spread and its extremes, which is what matters for safety and risk.</p>
+<p>Monte Carlo simulation answers this directly by running the model thousands of times with randomly sampled inputs. For nonlinear finite-element models of reinforced concrete, where each run is expensive, that quickly becomes impractical.</p>
+<h2>Research question</h2>
+<p>How can the effect of structural uncertainties on the response of reinforced concrete frames be evaluated reliably, at a fraction of the computational cost of brute-force simulation?</p>
+<h2>Approach</h2>
+<ul><li>Wrote Python implementations of three families of reliability methods: <strong>Monte Carlo simulation</strong> (the reference), <strong>First-Order Second-Moment (FOSM)</strong> analysis (fast but locally linear), and <strong>dimension-reduction methods</strong>, which estimate statistical moments of the response from a small, structured set of model runs.</li><li>Coupled these methods with the <strong>TaRa</strong> nonlinear fiber-based finite-element program through its input and output files, automating hundreds of nonlinear analyses.</li><li>Compared the methods on reinforced concrete members and frames, and examined which uncertain inputs contribute most to response variability.</li></ul>
+<p>The interactive demo below shows the core idea on a simple textbook example (not the thesis models).</p>
+<h2>Thesis and publication</h2>
+<ul><li>M.Sc. thesis, Tarbiat Modares University (2022), advised by Prof. Masoud Soltani: <em>An approximate method to consider structural uncertainties in the response evaluation of reinforced concrete frames.</em></li><li><strong>Allahyari, M.</strong>, &amp; Soltani, M. <em>An efficient framework for uncertainty propagation in nonlinear reinforced concrete analysis using multiplicative dimension reduction and Laplace-transform maximum entropy.</em> PLOS ONE, under review.</li></ul>
+<p><a href="../projects/uncertainty-demo.html">Try the interactive demo →</a></p></div>
+</article>
+</main>
+<footer class="site-footer">
+  <div class="wrap footer-inner">
+    <p>© 2026 Marzieh Allahyari · Department of Civil and Environmental Engineering, University of Kansas</p>
+    <p class="footer-links"><a href="mailto:marzieh.allahyari@ku.edu">marzieh.allahyari@ku.edu</a> · <a href="https://www.linkedin.com/in/marzieh-allahyari-564526149" rel="noopener" target="_blank">LinkedIn</a> · <a href="https://www.researchgate.net/profile/Marzieh-Allahyari-2" rel="noopener" target="_blank">ResearchGate</a></p>
+  </div>
+</footer>
+<script src="../assets/js/main.js" defer></script>
+
+</body>
+</html>
