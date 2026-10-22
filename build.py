@@ -104,7 +104,8 @@ def page(path, title, body, active="", description=None, scripts=()):
         '<li><a href="{r}{h}"{c}>{l}</a></li>'.format(
             r=root, h=h, l=l, c=' aria-current="page"' if h == active else "")
         for h, l in NAV)
-    canonical = SITE["site_url"].rstrip("/") + "/" + path
+    site_origin = SITE["site_url"].rstrip("/")
+    canonical = site_origin + "/" + ("" if path == "index.html" else path)
     social = ('<link rel="canonical" href="{}">\n<meta property="og:image" content="{}/assets/img/portrait.jpg">'
               .format(esc(canonical), esc(SITE["site_url"].rstrip("/")))) if SITE["site_url"] else ""
     person = {
@@ -112,6 +113,18 @@ def page(path, title, body, active="", description=None, scripts=()):
         "jobTitle": "Ph.D. Student, Civil Engineering", "affiliation": {"@type": "CollegeOrUniversity", "name": "University of Kansas"},
         "email": "mailto:" + SITE["emails"][0], "sameAs": [l["url"] for l in SITE["links"]],
     }
+    structured_data = person
+    if site_origin:
+        person.update({"@id": site_origin + "/#person", "url": site_origin + "/",
+                       "image": site_origin + "/assets/img/portrait.jpg"})
+        social += '\n<meta property="og:url" content="{}">\n<meta property="og:site_name" content="{}">'.format(esc(canonical), esc(SITE["name"]))
+        if path == "index.html":
+            structured_data = {"@context": "https://schema.org", "@graph": [
+                person,
+                {"@type": "WebSite", "@id": site_origin + "/#website",
+                 "name": SITE["name"], "url": site_origin + "/",
+                 "publisher": {"@id": site_origin + "/#person"}},
+            ]}
     script_tags = "".join('<script src="{}assets/js/{}" defer></script>'.format(root, s) for s in scripts)
     return """<!doctype html>
 <html lang="en">
@@ -156,7 +169,7 @@ def page(path, title, body, active="", description=None, scripts=()):
 </body>
 </html>
 """.format(title=full_title, desc=desc, social=social,
-           root=root, ld=json.dumps(person), name=esc(SITE["name"]), nav=nav, body=body,
+           root=root, ld=json.dumps(structured_data), name=esc(SITE["name"]), nav=nav, body=body,
            year=date.today().year, aff=esc(SITE["affiliation"]), scripts=script_tags,
            links=" · ".join('<a href="mailto:{0}">{0}</a>'.format(esc(e)) for e in SITE["emails"][:1]) + " · " +
                  " · ".join('<a href="{}" rel="noopener" target="_blank">{}</a>'.format(esc(l["url"]), esc(l["label"])) for l in SITE["links"]))
@@ -512,7 +525,7 @@ def main():
 
     base = SITE["site_url"].rstrip("/")
     if base:
-        urls = "".join("<url><loc>{}/{}</loc></url>".format(esc(base), p) for p in pages if p != "404.html")
+        urls = "".join("<url><loc>{}/{}</loc></url>".format(esc(base), "" if p == "index.html" else p) for p in pages if p != "404.html")
         (OUT / "sitemap.xml").write_text('<?xml version="1.0" encoding="UTF-8"?>'
                                          '<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">{}</urlset>'.format(urls), encoding="utf-8")
     (OUT / "robots.txt").write_text("User-agent: *\nAllow: /\n" + ("Sitemap: {}/sitemap.xml\n".format(base) if base else ""), encoding="utf-8")
